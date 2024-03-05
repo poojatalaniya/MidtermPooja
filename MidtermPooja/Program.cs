@@ -61,5 +61,58 @@ public class InventoryItem
         Console.WriteLine($"Quantity in Stock: {QuantityInStock}");
     }
 }
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Creating instances of InventoryItem
+        InventoryItem item1 = new InventoryItem("Laptop", 101, 1200.50, 10);
+        InventoryItem item2 = new InventoryItem("Smartphone", 102, 800.30, 15);
+
+        // Printing details of all items
+        Console.WriteLine("Item Details:");
+        item1.PrintDetails();
+        item2.PrintDetails();
+
+        // Selling some items and then printing the updated details
+        Console.WriteLine("\nSelling 5 Laptops...");
+        item1.SellItem(5);
+        Console.WriteLine("Updated Laptop Details:");
+        item1.PrintDetails();
+
+        Console.WriteLine("\nSelling 3 Smartphones...");
+        item2.SellItem(3);
+        Console.WriteLine("Updated Smartphone Details:");
+        item2.PrintDetails();
+
+        // Restocking an item and printing the updated details
+        Console.WriteLine("\nRestocking 10 Laptops...");
+        item1.RestockItem(10);
+        Console.WriteLine("Updated Laptop Details:");
+        item1.PrintDetails();
+
+        // Checking if an item is in stock and printing a message accordingly
+        Console.WriteLine("\nChecking if Laptop is in stock...");
+        if (item1.IsInStock())
+        {
+            Console.WriteLine("Laptop is in stock.");
+        }
+        else
+        {
+            Console.WriteLine("Laptop is not in stock.");
+        }
+
+        Console.WriteLine("\nChecking if Smartphone is in stock...");
+        if (item2.IsInStock())
+        {
+            Console.WriteLine("Smartphone is in stock.");
+        }
+        else
+        {
+            Console.WriteLine("Smartphone is not in stock.");
+        }
+    }
+}
+
 
 
