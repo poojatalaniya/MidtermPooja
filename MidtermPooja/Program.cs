@@ -52,5 +52,14 @@ public class InventoryItem
     {
         return QuantityInStock > 0;
     }
+    // Printing item details
+    public void PrintDetails()
+    {
+        Console.WriteLine($"Name: {ItemName}");
+        Console.WriteLine($"ID: {ItemId}");
+        Console.WriteLine($"Price: {Price}");
+        Console.WriteLine($"Quantity in Stock: {QuantityInStock}");
+    }
+}
 
 
