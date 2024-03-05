@@ -34,5 +34,23 @@ public class InventoryItem
     {
         QuantityInStock += additionalQuantity;
     }
+    // Selling an item
+    public void SellItem(int quantitySold)
+    {
+        if (QuantityInStock - quantitySold < 0)
+        {
+            Console.WriteLine("Not enough items in stock to sell.");
+        }
+        else
+        {
+            QuantityInStock -= quantitySold;
+        }
+    }
+
+    // Checking if an item is in stock
+    public bool IsInStock()
+    {
+        return QuantityInStock > 0;
+    }
 
 
