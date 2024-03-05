@@ -21,5 +21,18 @@ public class InventoryItem
         Price = price;
         QuantityInStock = quantityInStock;
     }
+    // Methods
+
+    // Updating the price of the item
+    public void UpdatePrice(double newPrice)
+    {
+        Price = newPrice;
+    }
+
+    // Restocking the item
+    public void RestockItem(int additionalQuantity)
+    {
+        QuantityInStock += additionalQuantity;
+    }
 
 
